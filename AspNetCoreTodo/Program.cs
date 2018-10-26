@@ -22,7 +22,9 @@ namespace AspNetCoreTodo
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel()
                 .UseStartup<Startup>()
+                .UseIISIntegration()
                 .Build();
 
         private static void InitializeDatabase(IWebHost host)
