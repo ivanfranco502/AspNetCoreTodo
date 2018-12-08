@@ -9,6 +9,8 @@ namespace AspNetCoreTodo.Models
 
         public bool IsDone { get; set; }
 
+        public string Description { get; set; }
+
         [Required]
         public string Title { get; set; }
 
